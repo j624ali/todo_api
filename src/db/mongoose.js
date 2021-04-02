@@ -7,4 +7,6 @@ mongoose.connect(process.env.MONGODB_CONNECTION, {
     useFindAndModify: false,
     useCreateIndex: true
 })
+.then(() => console.log('Connected to database'))
+.catch((e) => console.log('Database connection failed.', e));
 
